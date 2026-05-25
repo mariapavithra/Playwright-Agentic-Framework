@@ -1,0 +1,59 @@
+name: Playwright E2E Tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Playwright Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    strategy:
+      # Run browsers in parallel
+      matrix:
+        browser: [chromium, firefox]
+      fail-fast: false
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ matrix.browser }}
+
+      - name: Run Playwright tests
+        run: npx playwright test --project=${{ matrix.browser }}
+        env:
+          BASE_URL: ${{ secrets.BASE_URL || 'https://www.saucedemo.com' }}
+          CI: true
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-${{ matrix.browser }}
+          path: playwright-report/
+          retention-days: 14
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-${{ matrix.browser }}
+          path: test-results/
+          retention-days: 7

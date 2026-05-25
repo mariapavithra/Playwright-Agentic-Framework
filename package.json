@@ -1,0 +1,21 @@
+{
+  "name": "playwright-agentic-framework",
+  "version": "1.0.0",
+  "description": "Self-healing Playwright E2E framework with AI-assisted test maintenance, parallel execution, and CI/CD integration",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:parallel": "npx playwright test --workers=4",
+    "lint": "npx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "dotenv": "^16.4.0"
+  }
+}

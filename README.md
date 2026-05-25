@@ -2,7 +2,7 @@
 
 > **Self-healing E2E automation framework** with AI-assisted test maintenance, parallel worker isolation, and CI/CD integration.
 
-[![Playwright Tests](https://github.com/YOUR_USERNAME/playwright-agentic-framework/actions/workflows/playwright.yml/badge.svg)](https://github.com/YOUR_USERNAME/playwright-agentic-framework/actions)
+[![Playwright Tests](https://github.com/mariapavithra/Playwright-Agentic-Framework/actions/workflows/playwright.yml/badge.svg)](https://github.com/mariapavithra/Playwright-Agentic-Framework/actions)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Playwright](https://img.shields.io/badge/Playwright-1.44-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
@@ -44,7 +44,7 @@ Combined with **parallel worker isolation** and **Page Object Model architecture
 ## 🏗️ Architecture
 
 ```
-playwright-agentic-framework/
+Playwright-Agentic-Framework/
 │
 ├── src/
 │   ├── tests/                  # Test suites (spec files)
@@ -109,8 +109,8 @@ The test **passes**. The log tells you exactly which selector needs updating.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/playwright-agentic-framework.git
-cd playwright-agentic-framework
+git clone https://github.com/mariapavithra/Playwright-Agentic-Framework.git
+cd Playwright-Agentic-Framework
 
 # 2. Install dependencies
 npm install
@@ -194,7 +194,7 @@ Playwright fixtures provide dependency injection — tests declare what they nee
 **Maria Pavithra**
 Senior QA Automation Engineer | SDET | ISTQB Advanced Certified
 
-[LinkedIn](https://linkedin.com/in/YOUR_PROFILE) · [GitHub](https://github.com/YOUR_USERNAME)
+[LinkedIn](https://linkedin.com/in/mariapavithra) · [GitHub](https://github.com/mariapavithra)
 
 ---
 

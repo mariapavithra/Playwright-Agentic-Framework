@@ -6,6 +6,7 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Playwright](https://img.shields.io/badge/Playwright-1.44-green)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
+![Node](https://img.shields.io/badge/Node.js-18+-339933)
 
 ---
 
@@ -38,6 +39,9 @@ Combined with **parallel worker isolation** and **Page Object Model architecture
 | Test maintenance time per sprint | ~8 hours | ~25 minutes | **95% reduction** |
 | Flaky test false-failure rate | ~15% | <1% | **Near-zero flakes** |
 | Code duplication across test files | High | Minimal | **Abstract base pattern** |
+
+> *Metrics sourced from production CI/CD pipelines on an internal multi-tenant SaaS platform. The demo in this repo uses [SauceDemo](https://www.saucedemo.com) as a publicly accessible substitute.*
+> ![Test Report](docs/report-screenshot.png)
 
 ---
 
